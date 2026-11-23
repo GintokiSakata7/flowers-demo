@@ -38,10 +38,9 @@ export default function Events() {
   const initialDesign = designs.find(d => d.id === searchParams.get('design'))
   const [step, setStep] = useState(0)
 
-  // Always reset to step 0 (Your occasion) and scroll to top when page opens or params change
+  // Always start at step 0 (Your occasion) when design query changes
   useEffect(() => {
     setStep(0)
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [searchParams])
   const [form, setForm] = useState({
     eventType: initialDesign?.occasion || 'Wedding',
@@ -110,27 +109,20 @@ export default function Events() {
     return Object.keys(nextErrors).length === 0
   }
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-  }
-
   const next = () => {
     if (validateStep()) {
       setStep(s => Math.min(4, s + 1))
-      scrollToTop()
     }
   }
 
   const previous = () => {
     setErrors({})
     setStep(s => Math.max(0, s - 1))
-    scrollToTop()
   }
 
   const goToStep = (i) => {
     if (i < step) {
       setStep(i)
-      scrollToTop()
     }
   }
 
@@ -559,7 +551,7 @@ export default function Events() {
                       <span>OCCASION</span>
                       <h4>{form.eventType}</h4>
                     </div>
-                    <button type="button" onClick={() => { setStep(0); scrollToTop(); }}>
+                    <button type="button" onClick={() => setStep(0)}>
                       Edit
                     </button>
                   </div>
