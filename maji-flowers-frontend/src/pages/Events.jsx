@@ -23,141 +23,180 @@ export const flowerCatalog = [
   {
     id: 'red-rose',
     name: 'Red Rose',
-    localNames: { hi: 'लाल गुलाब', te: 'ఎరుపు గులాబీ', ta: 'சிகப்பு ரோஜா' },
-    altPhonetic: 'Gulab / Roja',
+    localNames: { te: 'ఎరుపు గులాబీ', hi: 'लाल गुलाब', ta: 'சிகப்பு ரோஜா' },
+    altPhonetic: 'Erupu Gulabi',
     image: 'https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=600&q=80',
     unit: 'bunches',
-    tag: 'Classic · शादी स्पेशल',
+    tag: 'క్లాసిక్ · పెళ్లి స్పెషల్',
   },
   {
     id: 'pink-rose',
     name: 'Pink Rose',
-    localNames: { hi: 'गुलाबी गुलाब', te: 'గులాబీ పువ్వు', ta: 'ரோஸ்' },
-    altPhonetic: 'Gulabi Gulab / Roja',
+    localNames: { te: 'గులాబీ పువ్వు', hi: 'गुलाबी गुलाब', ta: 'ரோஸ்' },
+    altPhonetic: 'Gulabi Puvvu',
     image: 'https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=600&q=80',
     unit: 'bunches',
-    tag: 'Soft · सुंदर लुक',
+    tag: 'సున్నితం · అందమైన లుక్',
   },
   {
     id: 'yellow-rose',
     name: 'Yellow Rose',
-    localNames: { hi: 'पीला गुलाब', te: 'పసుపు గులాబీ', ta: 'மஞ்சள் ரோஜா' },
-    altPhonetic: 'Peela Gulab / Manjal Roja',
+    localNames: { te: 'పసుపు గులాబీ', hi: 'पीला गुलाब', ta: 'மஞ்சள் ரோஜா' },
+    altPhonetic: 'Pasupu Gulabi',
     image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80',
     unit: 'bunches',
-    tag: 'Bright · हल्दी स्पेशल',
+    tag: 'ప్రకాశవంతం · పసుపు వేడుక',
   },
   {
     id: 'jasmine-buds',
     name: 'Jasmine Buds',
-    localNames: { hi: 'मोगरा / चमेली', te: 'మల్లె మొగ్గలు', ta: 'மல்லிகை மொட்டு' },
-    altPhonetic: 'Mogra / Malli',
+    localNames: { te: 'మల్లె మొగ్గలు', hi: 'मोगरा', ta: 'மல்லிகை' },
+    altPhonetic: 'Malle Moggallu',
     image: 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=600&q=80',
     unit: 'kg / bunches',
-    tag: 'Fragrant · मंडप माला',
+    tag: 'సువాసన · మండపం మాల',
   },
   {
     id: 'marigold',
     name: 'Marigold',
-    localNames: { hi: 'गेंदा फूल', te: 'బంతి పూలు', ta: 'சாமந்தி' },
-    altPhonetic: 'Genda / Banti / Samanthi',
+    localNames: { te: 'బంతి పూలు', hi: 'गेंदा फूल', ta: 'சாமந்தி' },
+    altPhonetic: 'Banti Poolu',
     image: 'https://images.unsplash.com/photo-1589244159943-460088ed5c92?auto=format&fit=crop&w=600&q=80',
     unit: 'kg',
-    tag: 'Festive · शुभ अवसर',
+    tag: 'పండుగ · శుభకార్యం',
   },
   {
     id: 'white-chrysanthemum',
     name: 'White Chrysanthemum',
-    localNames: { hi: 'सफ़ेद सेवंती', te: 'తెల్ల చామంతి', ta: 'வெள்ளை சாமந்தி' },
-    altPhonetic: 'Sevanthi / Chamanti',
+    localNames: { te: 'తెల్ల చామంతి', hi: 'सफ़ेद सेवंती', ta: 'வெள்ளை சாமந்தி' },
+    altPhonetic: 'Tella Chamanti',
     image: 'https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=600&q=80',
     unit: 'bunches',
-    tag: 'Pure · पूजा व सजावट',
+    tag: 'పరిశుద్ధం · పూజ & అలంకరణ',
   },
   {
     id: 'tuberose',
     name: 'Tuberose',
-    localNames: { hi: 'रजनीगंधा', te: 'సంపంగి', ta: 'சம்பங்கி' },
-    altPhonetic: 'Rajnigandha / Sampangi',
+    localNames: { te: 'సంపంగి పూలు', hi: 'रजनीगंधा', ta: 'சம்பங்கி' },
+    altPhonetic: 'Sampangi',
     image: 'https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=600&q=80',
     unit: 'bunches',
-    tag: 'High Fragrance · महक',
+    tag: 'మంచి సువాసన · సంపంగి',
   },
   {
     id: 'lotus',
     name: 'Lotus',
-    localNames: { hi: 'कमल फूल', te: 'తామర పువ్వు', ta: 'தாமரை' },
-    altPhonetic: 'Kamal / Thamara',
+    localNames: { te: 'తామర పువ్వు', hi: 'कमल फूल', ta: 'தாமரை' },
+    altPhonetic: 'Thamara Puvvu',
     image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80',
     unit: 'pieces',
-    tag: 'Devotional · पवित्र पूजा',
+    tag: 'భక్తి · దేవుని పూజ',
   },
   {
     id: 'orchid',
     name: 'Orchid',
-    localNames: { hi: 'ऑर्किड', te: 'ఆర్కిడ్', ta: 'ஆர்க்கிட்' },
-    altPhonetic: 'Orchid',
+    localNames: { te: 'ఆర్కిడ్ పూలు', hi: 'ऑर्किड', ta: 'ஆர்க்கிட்' },
+    altPhonetic: 'Orchid Poolu',
     image: 'https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=600&q=80',
     unit: 'stems',
-    tag: 'Premium · स्टेज डेकोर',
+    tag: 'ప్రీమియం · స్టేజ్ డెకరేషన్',
   },
   {
     id: 'gerbera',
     name: 'Gerbera',
-    localNames: { hi: 'जरबेरा', te: 'జెర్బెరా', ta: 'ஜெர்பரா' },
+    localNames: { te: 'జెర్బెరా పూలు', hi: 'जरबेरा', ta: 'ஜெர்பரா' },
     altPhonetic: 'Gerbera',
     image: 'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=600&q=80',
     unit: 'bunches',
-    tag: 'Vibrant · रंग-बिरंगा',
+    tag: 'రంగు రంగుల పువ్వులు',
   },
   {
     id: 'carnation',
     name: 'Carnation',
-    localNames: { hi: 'कारनेशन', te: 'కార్నేషన్', ta: 'கார்னேஷன்' },
+    localNames: { te: 'కార్నేషన్ పూలు', hi: 'कारनेशन', ta: 'கார்னேஷன்' },
     altPhonetic: 'Carnation',
     image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=600&q=80',
     unit: 'bunches',
-    tag: 'Long Lasting · टिकाऊ',
+    tag: 'ఎక్కువ రోజులు ఉండేవి',
   },
   {
     id: 'gladiolus',
     name: 'Gladiolus',
-    localNames: { hi: 'ग्लैडियोलस', te: 'గ్లాడియోలస్', ta: 'கிளாடியோலஸ்' },
+    localNames: { te: 'గ్లాడియోలస్ పూలు', hi: 'ग्लैडियोलस', ta: 'கிளாடியோலஸ்' },
     altPhonetic: 'Gladiolus',
     image: 'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80',
     unit: 'stems',
-    tag: 'Tall Stems · खंभे व गेट',
+    tag: 'పొడవైన పూలు · ఎంట్రన్స్ గేట్',
   },
 ]
 
 export const occasionList = [
-  { name: 'Wedding', icon: '💍', hi: 'शादी / विवाह', te: 'వివాహం', ta: 'திருமணம்' },
-  { name: 'Engagement', icon: '🤝', hi: 'सगाई / रोका', te: 'నిశ్చితార్థం', ta: 'நிச்சயதார்த்தம்' },
-  { name: 'Reception', icon: '🥂', hi: 'रिसेप्शन / दावत', te: 'విందు', ta: 'வரவேற்பு' },
-  { name: 'Haldi', icon: '💛', hi: 'हल्दी समारोह', te: 'పసుపు వేడుక', ta: 'நலங்கு' },
-  { name: 'Mehendi', icon: '🌿', hi: 'मेहंदी उत्सव', te: 'మెహెంది', ta: 'மெஹந்தி' },
-  { name: 'Birthday', icon: '🎂', hi: 'जन्मदिन', te: 'పుట్టినరోజు', ta: 'பிறந்தநாள்' },
-  { name: 'Anniversary', icon: '💑', hi: 'सालगिरह', te: 'వార్షికోత్సవం', ta: 'திருமண நாள்' },
-  { name: 'Housewarming', icon: '🏡', hi: 'गृहप्रवेश', te: 'గృహప్రవేశం', ta: 'புதுமனை புகுவிழா' },
-  { name: 'Religious function', icon: '🪔', hi: 'पूजा / अनुष्ठान', te: 'పూజా కార్యక్రమం', ta: 'பூஜை விழா' },
-  { name: 'Corporate event', icon: '🏢', hi: 'ऑफिस कार्यक्रम', te: 'కార్పొరేట్ ఈవెంట్', ta: 'அலுவலக விழா' },
-  { name: 'Other celebration', icon: '🎉', hi: 'अन्य उत्सव', te: 'ఇతర వేడుక', ta: 'மற்ற கொண்டாட்டம்' },
+  { name: 'Wedding', icon: '💍', te: 'వివాహం / పెళ్లి', hi: 'शादी / विवाह', ta: 'திருமணம்' },
+  { name: 'Engagement', icon: '🤝', te: 'నిశ్చితార్థం', hi: 'सगाई / रोका', ta: 'நிச்சயதார்த்தம்' },
+  { name: 'Reception', icon: '🥂', te: 'రిసెప్షన్ / విందు', hi: 'रिसेप्शन / दावत', ta: 'வரவேற்பு' },
+  { name: 'Haldi', icon: '💛', te: 'పసుపు వేడుక / నలుగు', hi: 'हल्दी समारोह', ta: 'நலங்கு' },
+  { name: 'Mehendi', icon: '🌿', te: 'మెహెంది వేడుక', hi: 'मेहंदी उत्सव', ta: 'மெஹந்தி' },
+  { name: 'Birthday', icon: '🎂', te: 'పుట్టినరోజు వేడుక', hi: 'जन्मदिन', ta: 'பிறந்தநாள்' },
+  { name: 'Anniversary', icon: '💑', te: 'పెళ్లి రోజు / వార్షికోత్సవం', hi: 'सालगिरह', ta: 'திருமண நாள்' },
+  { name: 'Housewarming', icon: '🏡', te: 'గృహప్రవేశం', hi: 'गृहप्रवेश', ta: 'புதுமனை புகுவிழா' },
+  { name: 'Religious function', icon: '🪔', te: 'పూజా కార్యక్రమం / వ్రతం', hi: 'पूजा / अनुष्ठान', ta: 'பூஜை விழா' },
+  { name: 'Corporate event', icon: '🏢', te: 'కార్పొరేట్ ఈవెంట్', hi: 'ऑफिस कार्यक्रम', ta: 'அலுவலக விழா' },
+  { name: 'Other celebration', icon: '🎉', te: 'ఇతర వేడుక', hi: 'अन्य उत्सव', ta: 'மற்ற கொண்டாட்டம்' },
 ]
 
 export const decorationAreaList = [
-  { name: 'Main stage', icon: '🏛️', hi: 'मुख्य स्टेज / मंच', te: 'ప్రధాన వేదిక', ta: 'முக்கிய மேடை' },
-  { name: 'Mandap', icon: '⛩️', hi: 'मंडप / वेदी', te: 'కళ్యాణ మండపం', ta: 'மணமேடை' },
-  { name: 'Entrance / welcome gate', icon: '🚪', hi: 'स्वागत द्वार / मुख्य गेट', te: 'ప్రవేశ ద్వారం', ta: 'நுழைவு வாயில்' },
-  { name: 'Aisle / walkway', icon: '🚶', hi: 'रास्ता / वॉकवे', te: 'నడక మార్గం', ta: 'நடைபாதை' },
-  { name: 'Dining tables', icon: '🍽️', hi: 'खाने के टेबल', te: 'డైనింగ్ టేబుల్స్', ta: 'சாப்பாட்டு மேஜை' },
-  { name: 'Photo backdrop', icon: '📸', hi: 'फोटो बैकड्रॉप / सेल्फी बूथ', te: 'ఫోటో కార్నర్', ta: 'போட்டோ பூத்' },
-  { name: 'Car decoration', icon: '🚗', hi: 'गाड़ी सजावट', te: 'కారు డెకరేషన్', ta: 'கார் அலங்காரம்' },
-  { name: 'Garlands', icon: '🌸', hi: 'वरमाला / फूल माला', te: 'పూల దండలు', ta: 'பூ மாலைகள்' },
-  { name: 'Bouquets', icon: '💐', hi: 'गुलदस्ता / बुके', te: 'పూల గుత్తి', ta: 'பூங்கொத்து' },
-  { name: 'Complete venue styling', icon: '🏰', hi: 'पूरा हॉल / वेन्यू सजावट', te: 'మొత్తం వేదిక', ta: 'முழு மண்டப அலங்காரம்' },
+  { name: 'Main stage', icon: '🏛️', te: 'ప్రధాన వేదిక / స్టేజ్', hi: 'मुख्य मंच', ta: 'முக்கிய மேடை' },
+  { name: 'Mandap', icon: '⛩️', te: 'కళ్యాణ మండపం', hi: 'मंडप', ta: 'மணமேடை' },
+  { name: 'Entrance / welcome gate', icon: '🚪', te: 'స్వాగత ద్వారం / మెయిన్ గేట్', hi: 'स्वागत द्वार', ta: 'நுழைவு வாயில்' },
+  { name: 'Aisle / walkway', icon: '🚶', te: 'నడక మార్గం / పాత్‌వే', hi: 'रास्ता / वॉकवे', ta: 'நடைபாதை' },
+  { name: 'Dining tables', icon: '🍽️', te: 'డైనింగ్ టేబుల్స్', hi: 'भोजन टेबल', ta: 'சாப்பாட்டு மேஜை' },
+  { name: 'Photo backdrop', icon: '📸', te: 'ఫోటో కార్నర్ / సెల్ఫీ పాయింట్', hi: 'फोटो बैकड्रॉप', ta: 'போட்டோ பூத்' },
+  { name: 'Car decoration', icon: '🚗', te: 'కారు అలంకరణ', hi: 'गाड़ी सजावट', ta: 'கார் அலங்காரம்' },
+  { name: 'Garlands', icon: '🌸', te: 'పూల దండలు / కల్యాణ దండలు', hi: 'वरमाला / फूल माला', ta: 'பூ மாலைகள்' },
+  { name: 'Bouquets', icon: '💐', te: 'పూల గుత్తి / బొకేలు', hi: 'गुलदस्ता', ta: 'பூங்கொத்து' },
+  { name: 'Complete venue styling', icon: '🏰', te: 'మొత్తం వేదిక అలంకరణ', hi: 'पूरा वेन्यू सजावट', ta: 'முழு மண்டப அலங்காரம்' },
 ]
 
 const UI_TEXT = {
+  te: {
+    steps: ['వేడుక రకం', 'అలంకరణ ప్రదేశాలు', 'పూల ఎంపిక', 'వివరాలు & ఫోన్', 'సమీక్ష'],
+    audioVoiceLang: 'te-IN',
+    needHelpTitle: 'సహాయం కావాలా?',
+    needHelpDesc: 'ఫారమ్ నింపడం కష్టంగా ఉందా? నేరుగా కాల్ లేదా వాట్సాప్ చేయండి — మా నిపుణులే వివరాలు నమోదు చేసుకుంటారు.',
+    callNow: 'కాల్ చేయండి',
+    chatWa: 'వాట్సాప్',
+    step0Badge: '01 — వేడుక రకం',
+    step0Title: 'మీరు ఏ శుభకార్యం చేసుకుంటున్నారు?',
+    step0Sub: 'మీ వేడుకపై నొక్కండి. మేము సరైన పూలను, సరిపోయే అలంకరణను సూచిస్తాము.',
+    step0Audio: 'స్టెప్ 1: మీ వేడుక ఏమిటి? పెళ్లి, పుట్టినరోజు లేదా పూజ పై నొక్కండి.',
+    step1Badge: '02 — ప్రదేశాలు',
+    step1Title: 'ఏ ప్రదేశాలను అలంకరించాలి?',
+    step1Sub: 'స్టేజ్, మండపం, ప్రవేశ ద్వారం లాంటి ప్రదేశాలను ఎంచుకోండి. ఒకటి కంటే ఎక్కువ కూడా ఎంచుకోవచ్చు.',
+    step1Audio: 'స్టెప్ 2: ఏ ప్రదేశాలను అలంకరించాలి? వేదిక లేదా మండపం ఎంచుకోండి.',
+    step2Badge: '03 — పూల ఎంపిక',
+    step2Title: 'మీకు ఏ పూలు కావాలి?',
+    step2Sub: 'ఫోటోలను చూసి మీకు నచ్చిన పూలపై నొక్కండి. ఒకటి కంటే ఎక్కువ కూడా ఎంచుకోవచ్చు.',
+    step2Audio: 'స్టెప్ 3: మీకు ఏ పూలు కావాలి? ఫోటోలను చూసి నొక్కండి. తెలియకపోతే నిపుణులు ఎంచుకునే బటన్ నొక్కండి.',
+    step3Badge: '04 — వివరాలు',
+    step3Title: 'మీ వివరాలు తెలపండి',
+    step3Sub: 'తేదీ మరియు మీ మొబైల్ నంబర్ ఇవ్వండి. మా పూల నిపుణులు మీకు కాల్ చేసి మాట్లాడతారు.',
+    step3Audio: 'స్టెప్ 4: దయచేసి తేదీ మరియు ఫోన్ నంబర్ నమోదు చేయండి.',
+    step4Badge: '05 — సమీక్ష',
+    step4Title: 'మీరు ఎంచుకున్న వివరాలు',
+    step4Sub: 'మీ ఎంపికలను సరిచూసుకొని, వాట్సాప్‌లో పంపడానికి ఆకుపచ్చ బటన్‌ను నొక్కండి.',
+    step4Audio: 'స్టెప్ 5: వివరాలను తనిఖీ చేసి వాట్సాప్‌లో పంపండి.',
+    recommendBannerTitle: '✨ ఏ పూలు ఎంచుకోవాలో తెలియదా? (మా నిపుణులు ఎంచుకుంటారు)',
+    recommendBannerSub: 'ఆందోళన వద్దు! ఇక్కడ నొక్కండి, మీ శుభకార్యానికి సరిపోయే తాజా పూలను మా పూల నిపుణులే స్వయంగా ఎంచుకుంటారు.',
+    recommendSelected: '✓ నిపుణుల ఎంపిక ఎంచుకోబడింది',
+    recommendNotSelected: '+ నొక్కండి: నిపుణులు ఎంచుకుంటారు',
+    selectedFlowersHead: 'ఎంచుకున్న పూలు & పరిమాణం (ఐచ్ఛికం)',
+    selectedFlowersSub: 'పరిమాణం తెలియకపోతే పర్వాలేదు, మేము ఫోన్‌లో మాట్లాడుకుంటాము.',
+    back: 'వెనుకకు',
+    continue: 'ముందుకు',
+    addToBasket: 'వాట్సాప్‌లో పంపండి',
+    listenBtn: 'వినండి',
+    selectedCount: 'ఎంచుకున్నారు',
+  },
   en: {
     steps: ['Your occasion', 'The styling', 'Flower selection', 'Event details', 'Review'],
     audioVoiceLang: 'en-IN',
@@ -236,45 +275,6 @@ const UI_TEXT = {
     listenBtn: 'बोलकर सुनें',
     selectedCount: 'चुने गए',
   },
-  te: {
-    steps: ['వేడుక రకం', 'అలంకరణ ప్రదేశాలు', 'పూల ఎంపిక', 'వివరాలు & ఫోన్', 'సమీక్ష'],
-    audioVoiceLang: 'te-IN',
-    needHelpTitle: 'సహాయం కావాలా?',
-    needHelpDesc: 'నేరుగా కాల్ లేదా వాట్సాప్ చేయండి. మా నిపుణులు మీకు సులభంగా సహాయం చేస్తారు!',
-    callNow: 'కాల్ చేయండి',
-    chatWa: 'వాట్సాప్',
-    step0Badge: '01 — వేడుక రకం',
-    step0Title: 'మీరు ఏ వేడుక చేసుకుంటున్నారు?',
-    step0Sub: 'మీ వేడుకపై నొక్కండి. మేము సరైన పూలను సూచిస్తాము.',
-    step0Audio: 'స్టెప్ 1: మీ వేడుక ఏమిటి? పెళ్లి, పుట్టినరోజు లేదా పూజ పై నొక్కండి.',
-    step1Badge: '02 — ప్రదేశాలు',
-    step1Title: 'ఏ ప్రదేశాలను అలంకరించాలి?',
-    step1Sub: 'స్టేజ్, మండపం, ప్రవేశ ద్వారం లాంటి ప్రదేశాలను ఎంచుకోండి.',
-    step1Audio: 'స్టెప్ 2: ఏ ప్రదేశాలను అలంకరించాలి? వేదిక లేదా మండపం ఎంచుకోండి.',
-    step2Badge: '03 — పూల ఎంపిక',
-    step2Title: 'మీకు ఏ పూలు కావాలి?',
-    step2Sub: 'ఫోటోలను చూసి మీకు నచ్చిన పూలపై నొక్కండి. ఒకటి కంటే ఎక్కువ కూడా ఎంచుకోవచ్చు.',
-    step2Audio: 'స్టెప్ 3: మీకు ఏ పూలు కావాలి? ఫోటోలను చూసి నొక్కండి.',
-    step3Badge: '04 — వివరాలు',
-    step3Title: 'మీ వివరాలు తెలపండి',
-    step3Sub: 'తేదీ మరియు ఫోన్ నంబర్ ఇవ్వండి. మా నిపుణులు మీకు కాల్ చేస్తారు.',
-    step3Audio: 'స్టెప్ 4: దయచేసి తేదీ మరియు ఫోన్ నంబర్ నమోదు చేయండి.',
-    step4Badge: '05 — సమీక్ష',
-    step4Title: 'మీరు ఎంచుకున్న వివరాలు',
-    step4Sub: 'మీ ఎంపికలను తనిఖీ చేసి, వాట్సాప్‌లో పంపడానికి ఆకుపచ్చ బటన్‌ను నొక్కండి.',
-    step4Audio: 'స్టెప్ 5: వివరాలను తనిఖీ చేసి వాట్సాప్‌లో పంపండి.',
-    recommendBannerTitle: '✨ ఏ పూలు ఎంచుకోవాలో తెలియదా? (మా నిపుణులు ఎంచుకుంటారు)',
-    recommendBannerSub: 'ఆందోళన వద్దు! ఇక్కడ నొక్కండి, మీ శుభకార్యానికి సరిపోయే తాజా పూలను మేము ఎంచుకుంటాము.',
-    recommendSelected: '✓ నిపుణుల ఎంపిక ఎంచుకోబడింది',
-    recommendNotSelected: '+ నొక్కండి: నిపుణులు ఎంచుకుంటారు',
-    selectedFlowersHead: 'ఎంచుకున్న పూలు & పరిమాణం (ఐచ్ఛికం)',
-    selectedFlowersSub: 'పరిమాణం తెలియకపోతే పర్వాలేదు, మేము ఫోన్‌లో మాట్లాడుకుంటాము.',
-    back: 'వెనుకకు',
-    continue: 'ముందుకు',
-    addToBasket: 'వాట్సాప్‌లో పంపండి',
-    listenBtn: 'వినండి',
-    selectedCount: 'ఎంచుకున్నారు',
-  },
   ta: {
     steps: ['நிகழ்வு வகை', 'அலங்கார இடங்கள்', 'பூக்கள் தேர்வு', 'விவரங்கள் & எண்', 'சரிபார்த்தல்'],
     audioVoiceLang: 'ta-IN',
@@ -322,7 +322,7 @@ export default function Events() {
   const navigate = useNavigate()
   const initialDesign = designs.find(d => d.id === searchParams.get('design'))
   const [step, setStep] = useState(2) // Default to step 2 (Flower selection) or 0
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('te') // Defaults to Telugu as requested
   const [form, setForm] = useState({
     eventType: initialDesign?.occasion || 'Wedding',
     eventDate: '',
@@ -345,14 +345,14 @@ export default function Events() {
   const [referencePreview, setReferencePreview] = useState('')
   const [errors, setErrors] = useState({})
 
-  const t = UI_TEXT[language] || UI_TEXT.en
+  const t = UI_TEXT[language] || UI_TEXT.te
 
   const speak = (text, customLang) => {
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
     try {
       window.speechSynthesis.cancel()
       const utterance = new SpeechSynthesisUtterance(text)
-      utterance.lang = customLang || t.audioVoiceLang || 'en-IN'
+      utterance.lang = customLang || t.audioVoiceLang || 'te-IN'
       utterance.rate = 0.92
       window.speechSynthesis.speak(utterance)
     } catch {
@@ -393,12 +393,12 @@ export default function Events() {
 
   const validateStep = () => {
     const nextErrors = {}
-    if (step === 0 && !form.eventType) nextErrors.eventType = 'Choose an occasion to continue.'
-    if (step === 1 && form.areas.length === 0) nextErrors.areas = 'Select at least one area to decorate.'
+    if (step === 0 && !form.eventType) nextErrors.eventType = 'ముందుకు సాగడానికి వేడుకను ఎంచుకోండి.'
+    if (step === 1 && form.areas.length === 0) nextErrors.areas = 'కనీసం ఒక అలంకరణ ప్రదేశాన్ని ఎంచుకోండి.'
     if (step === 3) {
-      if (!form.eventDate) nextErrors.eventDate = 'Please select an event date.'
-      if (!form.name.trim()) nextErrors.name = 'Please enter your name.'
-      if (!form.phone.trim()) nextErrors.phone = 'Please enter a contact number.'
+      if (!form.eventDate) nextErrors.eventDate = 'దయచేసి వేడుక తేదీని ఎంచుకోండి.'
+      if (!form.name.trim()) nextErrors.name = 'దయచేసి మీ పేరు నమోదు చేయండి.'
+      if (!form.phone.trim()) nextErrors.phone = 'దయచేసి మీ మొబైల్ నంబర్ ఇవ్వండి.'
     }
     setErrors(nextErrors)
     return Object.keys(nextErrors).length === 0
@@ -418,7 +418,7 @@ export default function Events() {
       details: { ...form, referenceName },
       quantity: 1,
     })
-    notify('Your custom event plan is ready in the enquiry basket')
+    notify('మీ ఈవెంట్ ప్లాన్ బుట్టలో చేర్చబడింది')
     navigate('/cart')
   }
 
@@ -427,7 +427,7 @@ export default function Events() {
       <PageIntro
         eyebrow="Weddings · Functions · Celebrations"
         title={<>Your day, your way.<br /><em>Let’s plan the flowers.</em></>}
-        description="Choose what flowers and styling you love. Easy to pick, with photos, voice help, and direct WhatsApp support."
+        description="మీకు నచ్చిన పువ్వులు మరియు అలంకరణను సులభంగా ఎంచుకోండి. స్పష్టమైన ఫోటోలు, తెలుగు పేర్లు మరియు నేరుగా వాట్సాప్ సహాయం అందుబాటులో ఉన్నాయి."
         image="https://static.wixstatic.com/media/7bfb6f_5989b95a3f294edf9c60110876d8f2cf~mv2.jpg/v1/fill/w_1200,h_900,al_c,q_85/7bfb6f_5989b95a3f294edf9c60110876d8f2cf~mv2.jpg"
         imageAlt="Floral event decoration inspiration"
       />
@@ -436,11 +436,11 @@ export default function Events() {
         {/* Language selector and quick audio banner */}
         <div className="planner-top-toolbar">
           <div className="planner-lang-switch">
-            <span className="lang-switch-label"><Globe size={18} /> <b>Language / भाषा / மொழி / భాష:</b></span>
+            <span className="lang-switch-label"><Globe size={18} /> <b>భాష / Language:</b></span>
             <div className="lang-buttons">
+              <button type="button" className={language === 'te' ? 'active' : ''} onClick={() => setLanguage('te')}>తెలుగు (Telugu)</button>
               <button type="button" className={language === 'en' ? 'active' : ''} onClick={() => setLanguage('en')}>English</button>
               <button type="button" className={language === 'hi' ? 'active' : ''} onClick={() => setLanguage('hi')}>हिंदी (Hindi)</button>
-              <button type="button" className={language === 'te' ? 'active' : ''} onClick={() => setLanguage('te')}>తెలుగు (Telugu)</button>
               <button type="button" className={language === 'ta' ? 'active' : ''} onClick={() => setLanguage('ta')}>தமிழ் (Tamil)</button>
             </div>
           </div>
@@ -466,7 +466,7 @@ export default function Events() {
           {/* Sidebar */}
           <aside className="planner-sidebar">
             <div className="planner-progress">
-              <span>YOUR PLAN / प्रगति</span>
+              <span>YOUR PLAN / పురోగతి</span>
               <b>0{step + 1} <small>/ 05</small></b>
               <div className="progress-track"><i style={{ width: `${(step + 1) * 20}%` }} /></div>
             </div>
@@ -482,7 +482,7 @@ export default function Events() {
                   <span className="step-badge">{i < step ? <Check size={16} strokeWidth={3} /> : `0${i + 1}`}</span>
                   <div className="step-labels">
                     <b className="step-main-title">{label}</b>
-                    <small className="step-sub-title">Step 0{i + 1}</small>
+                    <small className="step-sub-title">స్టెప్ 0{i + 1}</small>
                   </div>
                 </button>
               ))}
@@ -490,8 +490,8 @@ export default function Events() {
 
             <div className="planner-help">
               <Flower2 size={24} />
-              <b>Need a helping hand?</b>
-              <p>Just tap the WhatsApp button or call us. We will note your requirements directly.</p>
+              <b>సహాయం కావాలా?</b>
+              <p>నేరుగా వాట్సాప్ లేదా కాల్ చేయండి. మా పూల నిపుణులే మీ అవసరాలను సులభంగా నమోదు చేసుకుంటారు.</p>
               <a href="https://wa.me/919491554114?text=Hello%20Maji%20Flowers%2C%20I%20need%20help%20planning%20event%20flowers." target="_blank" rel="noreferrer">
                 Direct WhatsApp ↗
               </a>
@@ -518,7 +518,7 @@ export default function Events() {
                 <div className="occasion-grid-accessible">
                   {occasionList.map((item) => {
                     const isSelected = form.eventType === item.name
-                    const localTitle = item[language] || item.hi
+                    const localTitle = item[language] || item.te
                     return (
                       <button
                         key={item.name}
@@ -542,7 +542,7 @@ export default function Events() {
 
                 <div className="planner-tip">
                   <Sparkles size={20} />
-                  <span>You can change your choices anytime before sending.</span>
+                  <span>మీరు పంపే ముందు ఎప్పుడైనా మీ ఎంపికలను మార్చుకోవచ్చు.</span>
                 </div>
               </div>
             )}
@@ -565,7 +565,7 @@ export default function Events() {
                 <div className="areas-grid-accessible">
                   {decorationAreaList.map((area) => {
                     const isSelected = form.areas.includes(area.name)
-                    const localTitle = area[language] || area.hi
+                    const localTitle = area[language] || area.te
                     return (
                       <button
                         key={area.name}
@@ -589,8 +589,8 @@ export default function Events() {
 
                 {/* Design direction chips */}
                 <div className="field-label-row-accessible">
-                  <label>Colour & Styling Theme / रंग और थीम</label>
-                  <span>Optional</span>
+                  <label>Colour & Styling Theme / రంగులు మరియు థీమ్</label>
+                  <span>ఐచ్ఛికం</span>
                 </div>
                 <div className="theme-chips-accessible">
                   {themes.map(theme => (
@@ -608,8 +608,8 @@ export default function Events() {
                 {/* Recommended Curated Inspiration */}
                 <div className="recommended-designs">
                   <div className="recommended-title">
-                    <span>CURATED DECORATION IDEAS / सुझाई गई सजावट</span>
-                    <small>Tap any photo to select</small>
+                    <span>CURATED DECORATION IDEAS / ప్రత్యేక డెకరేషన్ ఐడియాలు</span>
+                    <small>ఎంచుకోవడానికి ఏదైనా ఫోటోపై నొక్కండి</small>
                   </div>
                   <div className="recommended-row-accessible">
                     {designs.map(d => (
@@ -664,11 +664,11 @@ export default function Events() {
                   </div>
                 </div>
 
-                {/* High-visibility Flower Photo Cards Grid */}
+                {/* High-visibility Flower Photo Cards Grid with Telugu Words */}
                 <div className="flower-photo-grid">
                   {flowerCatalog.map((flower) => {
                     const isSelected = form.flowers.includes(flower.name)
-                    const localName = flower.localNames[language] || flower.localNames.hi
+                    const localName = flower.localNames[language] || flower.localNames.te
                     return (
                       <div
                         key={flower.name}
@@ -691,11 +691,11 @@ export default function Events() {
                             <button
                               type="button"
                               className="flower-audio-btn"
-                              title="Hear name pronunciation / आवाज सुनें"
+                              title="Hear name pronunciation / వినండి"
                               onClick={(e) => {
                                 e.stopPropagation()
-                                const phrase = `${flower.name}. ${localName}.`
-                                speak(phrase)
+                                const phrase = `${localName}. ${flower.name}.`
+                                speak(phrase, 'te-IN')
                               }}
                             >
                               <Volume2 size={17} />
@@ -736,7 +736,7 @@ export default function Events() {
                             <img src={flowerObj?.image} alt={item.name} className="qty-thumb" />
                             <div className="qty-info">
                               <b>{item.name}</b>
-                              <small>{flowerObj?.localNames[language] || flowerObj?.localNames.hi}</small>
+                              <small>{flowerObj?.localNames[language] || flowerObj?.localNames.te}</small>
                             </div>
                             <div className="friendly-stepper">
                               <button
@@ -748,7 +748,7 @@ export default function Events() {
                                 <Minus size={16} />
                               </button>
                               <span className="stepper-val">
-                                {currentQty > 0 ? `${currentQty} ${item.unit}` : `Any qty (${item.unit})`}
+                                {currentQty > 0 ? `${currentQty} ${item.unit}` : `ఎంతైనా (${item.unit})`}
                               </span>
                               <button
                                 type="button"
@@ -785,7 +785,7 @@ export default function Events() {
 
                 <div className="form-grid-accessible">
                   <label className="form-field-accessible">
-                    <span>📅 Event Date * / तारीख</span>
+                    <span>📅 Event Date * / వేడుక తేదీ</span>
                     <input
                       type="date"
                       value={form.eventDate}
@@ -796,7 +796,7 @@ export default function Events() {
                   </label>
 
                   <label className="form-field-accessible">
-                    <span>⏰ Event Time / समय</span>
+                    <span>⏰ Event Time / సమయం</span>
                     <input
                       type="time"
                       value={form.eventTime}
@@ -805,73 +805,73 @@ export default function Events() {
                   </label>
 
                   <label className="form-field-accessible">
-                    <span>📍 Venue / Function Hall / हॉल का नाम</span>
+                    <span>📍 Venue / Function Hall / ఫంక్షన్ హాల్ లేదా కళ్యాణ మండపం</span>
                     <input
                       value={form.venue}
                       onChange={e => update('venue', e.target.value)}
-                      placeholder="e.g. Royal Palace / Taj Hall"
+                      placeholder="ఉదాహరణ: రాయల్ ప్యాలెస్ / తాజ్ హాల్"
                     />
                   </label>
 
                   <label className="form-field-accessible">
-                    <span>🏙️ Location / City / शहर या इलाका</span>
+                    <span>🏙️ Location / City / ప్రాంతం లేదా ఊరు</span>
                     <input
                       value={form.location}
                       onChange={e => update('location', e.target.value)}
-                      placeholder="e.g. Hyderabad, Trichy, Mehdipatnam"
+                      placeholder="ఉదాహరణ: హైదరాబాద్, మెహదీపట్నం, గుడిమల్కాపూర్"
                     />
                   </label>
 
                   <label className="form-field-accessible">
-                    <span>👤 Your Name * / आपका नाम</span>
+                    <span>👤 Your Name * / మీ పేరు</span>
                     <input
                       value={form.name}
                       onChange={e => update('name', e.target.value)}
-                      placeholder="How should we call you?"
+                      placeholder="మేము మిమ్మల్ని ఎలా పిలవాలి?"
                     />
                     {errors.name && <small className="form-error-prominent">{errors.name}</small>}
                   </label>
 
                   <label className="form-field-accessible">
-                    <span>📞 Phone Number * / मोबाइल नंबर</span>
+                    <span>📞 Phone Number * / మొబైల్ నంబర్</span>
                     <input
                       type="tel"
                       value={form.phone}
                       onChange={e => update('phone', e.target.value)}
-                      placeholder="Your 10-digit mobile number"
+                      placeholder="మీ 10 అంకెల మొబైల్ నంబర్"
                     />
                     {errors.phone && <small className="form-error-prominent">{errors.phone}</small>}
                   </label>
 
                   <label className="form-field-accessible form-field-full">
-                    <span>💰 Approx Floral Budget / बजट (Optional)</span>
+                    <span>💰 Approx Floral Budget / బడ్జెట్ (ఐచ్ఛికం)</span>
                     <select value={form.budget} onChange={e => update('budget', e.target.value)}>
-                      <option value="">Not decided yet / अभी तय नहीं</option>
-                      <option>Below ₹15,000</option>
+                      <option value="">ఇంకా నిర్ణయించలేదు / మాట్లాడి నిర్ణయిస్తాము</option>
+                      <option>₹15,000 లోపు</option>
                       <option>₹15,000 – ₹30,000</option>
                       <option>₹30,000 – ₹60,000</option>
                       <option>₹60,000 – ₹1,20,000</option>
-                      <option>Above ₹1,20,000</option>
+                      <option>₹1,20,000 పైన</option>
                     </select>
                   </label>
 
                   <label className="form-field-accessible form-field-full">
-                    <span>📝 Any special note or instruction / कोई खास बात</span>
+                    <span>📝 Any special note or instruction / ఏవైనా ప్రత్యేక సూచనలు</span>
                     <textarea
                       rows="3"
                       value={form.notes}
                       onChange={e => update('notes', e.target.value)}
-                      placeholder="Colors preferred, timing, garland length, or any special flower requirements..."
+                      placeholder="రంగులు, సమయం, పూల దండల పొడవు లేదా ఏదైనా ప్రత్యేక అవసరాలు..."
                     />
                   </label>
 
                   {/* Photo upload for reference */}
                   <div className="form-field-accessible form-field-full">
-                    <span>📸 Photo Reference / प्रेरणा फोटो (Optional)</span>
+                    <span>📸 Photo Reference / మీకు నచ్చిన డెకరేషన్ ఫోటో (ఐచ్ఛికం)</span>
                     <label className="upload-area-accessible">
                       <ImagePlus size={24} />
-                      <span>{referenceName || 'Tap here to upload a photo of decoration you like'}</span>
-                      <small>Upload photo from your phone or computer</small>
+                      <span>{referenceName || 'మీకు నచ్చిన ఫోటోను అప్‌లోడ్ చేయడానికి ఇక్కడ నొక్కండి'}</span>
+                      <small>మీ ఫోన్ లేదా కంప్యూటర్ నుండి ఫోటో ఎంచుకోండి</small>
                       <input
                         type="file"
                         accept="image/png,image/jpeg,image/webp"
@@ -888,7 +888,7 @@ export default function Events() {
                       <div className="reference-preview-accessible">
                         <img src={referencePreview} alt="Reference" />
                         <button type="button" onClick={() => { setReferenceName(''); setReferencePreview('') }}>
-                          Remove photo
+                          ఫోటో తొలగించు
                         </button>
                       </div>
                     )}
@@ -915,28 +915,28 @@ export default function Events() {
                 <div className="review-card-accessible">
                   <div className="review-head-accessible">
                     <div>
-                      <span className="review-eyebrow">OCCASION / उत्सव</span>
+                      <span className="review-eyebrow">OCCASION / శుభకార్యం</span>
                       <h4>{form.eventType}</h4>
                     </div>
                     <button type="button" className="review-edit-btn" onClick={() => setStep(0)}>
-                      Change / बदलें
+                      మార్చండి / Edit
                     </button>
                   </div>
 
                   <div className="review-divider-accessible" />
 
                   <div className="review-row-accessible">
-                    <span>Spaces to decorate</span>
+                    <span>అలంకరణ ప్రదేశాలు</span>
                     <b>{form.areas.join(', ')}</b>
                   </div>
 
                   <div className="review-row-accessible">
-                    <span>Theme / Style</span>
+                    <span>థీమ్ / రంగులు</span>
                     <b>{form.theme}</b>
                   </div>
 
                   <div className="review-row-accessible review-flowers-block">
-                    <span>Flowers</span>
+                    <span>పువ్వులు</span>
                     {form.flowers.length > 0 ? (
                       <div className="review-flowers-summary">
                         {form.flowers.map(f => {
@@ -944,36 +944,36 @@ export default function Events() {
                           return (
                             <div key={f} className="review-flower-chip">
                               <img src={flowerObj?.image} alt={f} />
-                              <span>{f} {form.quantities[f] ? `(${form.quantities[f]})` : ''}</span>
+                              <span>{flowerObj?.localNames.te || f} {form.quantities[f] ? `(${form.quantities[f]})` : ''}</span>
                             </div>
                           )
                         })}
                       </div>
                     ) : (
-                      <b>✨ Florist expert recommendation</b>
+                      <b>✨ మా నిపుణుల ఎంపిక (Florist recommendation)</b>
                     )}
                   </div>
 
                   <div className="review-divider-accessible" />
 
                   <div className="review-row-accessible">
-                    <span>Event Date</span>
-                    <b>{form.eventDate || 'To be decided'}</b>
+                    <span>వేడుక తేదీ</span>
+                    <b>{form.eventDate || 'మాట్లాడి నిర్ణయిస్తాము'}</b>
                   </div>
 
                   <div className="review-row-accessible">
-                    <span>Venue</span>
-                    <b>{form.venue || 'To be shared on call'}</b>
+                    <span>ఫంక్షన్ హాల్</span>
+                    <b>{form.venue || 'ఫోన్ కాల్‌లో తెలుపుతాము'}</b>
                   </div>
 
                   <div className="review-row-accessible">
-                    <span>Contact Person</span>
+                    <span>సంప్రదించాల్సిన వివరాలు</span>
                     <b>{form.name} ({form.phone})</b>
                   </div>
 
                   {form.notes && (
                     <div className="review-row-accessible">
-                      <span>Note</span>
+                      <span>ప్రత్యేక గమనిక</span>
                       <p className="review-notes-text">“{form.notes}”</p>
                     </div>
                   )}
@@ -982,7 +982,7 @@ export default function Events() {
                 <div className="review-note-accessible">
                   <Sparkles size={20} />
                   <span>
-                    No advance payment required now! Our florist will call or WhatsApp you directly to discuss fresh flower rates and final arrangements.
+                    ఇప్పుడే ఎటువంటి ముందస్తు చెల్లింపు అవసరం లేదు! మా పూల నిపుణులు నేరుగా మీకు ఫోన్ లేదా వాట్సాప్ చేసి తాజా పూల ధరలు మరియు వివరాలు మాట్లాడతారు.
                   </span>
                 </div>
               </div>
@@ -996,7 +996,7 @@ export default function Events() {
                   <span>{t.back}</span>
                 </button>
               ) : (
-                <span className="planner-note-small">✨ Free consultation · No payment needed</span>
+                <span className="planner-note-small">✨ ఉచిత సంప్రదింపులు · చెల్లింపు అవసరం లేదు</span>
               )}
 
               {step < 4 ? (
@@ -1018,11 +1018,11 @@ export default function Events() {
       {/* Inspiration section at bottom */}
       <section className="event-aftercare">
         <div>
-          <Eyebrow>Need inspiration?</Eyebrow>
-          <h2>Start with a design.<br /><em>Make it your own.</em></h2>
+          <Eyebrow>స్ఫూర్తి కావాలా?</Eyebrow>
+          <h2>డిజైన్‌ను చూడండి.<br /><em>మీ శైలిలో మార్చుకోండి.</em></h2>
         </div>
-        <p>Explore curated directions, then adjust the spaces, flowers and details to suit your celebration.</p>
-        <ButtonLink to="/gallery" variant="outline">Browse the gallery</ButtonLink>
+        <p>వివిధ అందమైన డెకరేషన్ డిజైన్లను చూసి, మీ వేడుకకు తగినట్లు మార్చుకోండి.</p>
+        <ButtonLink to="/gallery" variant="outline">గ్యాలరీ చూడండి</ButtonLink>
       </section>
     </div>
   )
