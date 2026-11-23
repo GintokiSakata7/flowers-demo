@@ -414,7 +414,7 @@ export default function Events() {
       id: `event-${Date.now()}`,
       name: `${form.eventType} floral styling`,
       summary,
-      image: selectedDesign?.image || 'https://trichyflowers.in/img/weddings.png',
+      image: selectedDesign?.image || '/images/wedding-mandap.webp',
       details: { ...form, referenceName },
       quantity: 1,
     })
@@ -428,7 +428,7 @@ export default function Events() {
         eyebrow="Weddings · Functions · Celebrations"
         title={<>Your day, your way.<br /><em>Let’s plan the flowers.</em></>}
         description="మీకు నచ్చిన పువ్వులు మరియు అలంకరణను సులభంగా ఎంచుకోండి. స్పష్టమైన ఫోటోలు, తెలుగు పేర్లు మరియు నేరుగా వాట్సాప్ సహాయం అందుబాటులో ఉన్నాయి."
-        image="https://static.wixstatic.com/media/7bfb6f_5989b95a3f294edf9c60110876d8f2cf~mv2.jpg/v1/fill/w_1200,h_900,al_c,q_85/7bfb6f_5989b95a3f294edf9c60110876d8f2cf~mv2.jpg"
+        image="/images/reception-decor.webp"
         imageAlt="Floral event decoration inspiration"
       />
 
