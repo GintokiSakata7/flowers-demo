@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import {
   ArrowLeft,
   ArrowRight,
@@ -37,6 +37,12 @@ export default function Events() {
   const navigate = useNavigate()
   const initialDesign = designs.find(d => d.id === searchParams.get('design'))
   const [step, setStep] = useState(0)
+
+  // Always reset to step 0 (Your occasion) and scroll to top when page opens or params change
+  useEffect(() => {
+    setStep(0)
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [searchParams])
   const [form, setForm] = useState({
     eventType: initialDesign?.occasion || 'Wedding',
     eventDate: '',
@@ -104,8 +110,29 @@ export default function Events() {
     return Object.keys(nextErrors).length === 0
   }
 
-  const next = () => { if (validateStep()) setStep(s => Math.min(4, s + 1)) }
-  const previous = () => { setErrors({}); setStep(s => Math.max(0, s - 1)) }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }
+
+  const next = () => {
+    if (validateStep()) {
+      setStep(s => Math.min(4, s + 1))
+      scrollToTop()
+    }
+  }
+
+  const previous = () => {
+    setErrors({})
+    setStep(s => Math.max(0, s - 1))
+    scrollToTop()
+  }
+
+  const goToStep = (i) => {
+    if (i < step) {
+      setStep(i)
+      scrollToTop()
+    }
+  }
 
   const addRequest = () => {
     const flowerListSummary = form.flowers.length ? form.flowers.join(', ') : 'Florist recommendations welcome'
@@ -160,7 +187,7 @@ export default function Events() {
                 <button
                   key={label}
                   className={`planner-step ${i === step ? 'current' : ''} ${i < step ? 'done' : ''}`}
-                  onClick={() => i < step && setStep(i)}
+                  onClick={() => goToStep(i)}
                   disabled={i > step}
                   type="button"
                 >
@@ -532,7 +559,7 @@ export default function Events() {
                       <span>OCCASION</span>
                       <h4>{form.eventType}</h4>
                     </div>
-                    <button type="button" onClick={() => setStep(0)}>
+                    <button type="button" onClick={() => { setStep(0); scrollToTop(); }}>
                       Edit
                     </button>
                   </div>
