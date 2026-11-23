@@ -6,8 +6,28 @@ const readJSON = (key, fallback) => {
   try { const value = localStorage.getItem(key); return value ? JSON.parse(value) : fallback } catch { return fallback }
 }
 
+const getInitialProducts = () => {
+  const cached = readJSON('maji_products', initialProducts)
+  if (!Array.isArray(cached) || !cached.length) return initialProducts
+  const freshMap = Object.fromEntries(initialProducts.map(p => [p.id, p.image]))
+  let updated = false
+  const healed = cached.map(p => {
+    if (freshMap[p.id] && (p.image?.includes('photo-1592750475338') || p.image?.includes('photo-1518709268805') || freshMap[p.id].startsWith('/images/'))) {
+      if (p.image !== freshMap[p.id]) {
+        updated = true
+        return { ...p, image: freshMap[p.id] }
+      }
+    }
+    return p
+  })
+  if (updated) {
+    try { localStorage.setItem('maji_products', JSON.stringify(healed)) } catch {}
+  }
+  return healed
+}
+
 export function StoreProvider({ children }) {
-  const [products, setProducts] = useState(() => readJSON('maji_products', initialProducts))
+  const [products, setProducts] = useState(getInitialProducts)
   const [cart, setCart] = useState(() => readJSON('maji_cart', []))
   const [enquiries, setEnquiries] = useState(() => readJSON('maji_enquiries', []))
   const [designs, setDesigns] = useState(() => readJSON('maji_designs', initialDesigns))
