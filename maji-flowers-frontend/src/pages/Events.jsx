@@ -5,165 +5,38 @@ import {
   Check,
   Flower2,
   ImagePlus,
-  MessageCircle,
-  Minus,
-  Phone,
-  PhoneCall,
-  Plus,
   Sparkles,
-  Volume2,
 } from 'lucide-react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { ButtonLink, Eyebrow, PageIntro } from '../components/UI'
-import { themes } from '../data'
+import { decorationAreas, eventTypes, themes } from '../data'
 import { useStore } from '../store'
 
 export const flowerCatalog = [
-  {
-    id: 'red-rose',
-    name: 'Red Rose',
-    teluguName: 'ఎరుపు గులాబీ',
-    phonetic: 'Erupu Gulabi',
-    image: 'https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=600&q=80',
-    unit: 'bunches',
-    tag: 'Classic · Wedding favourite',
-  },
-  {
-    id: 'pink-rose',
-    name: 'Pink Rose',
-    teluguName: 'గులాబీ పువ్వు',
-    phonetic: 'Gulabi Puvvu',
-    image: 'https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=600&q=80',
-    unit: 'bunches',
-    tag: 'Soft · Romantic look',
-  },
-  {
-    id: 'yellow-rose',
-    name: 'Yellow Rose',
-    teluguName: 'పసుపు గులాబీ',
-    phonetic: 'Pasupu Gulabi',
-    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80',
-    unit: 'bunches',
-    tag: 'Bright · Haldi special',
-  },
-  {
-    id: 'jasmine-buds',
-    name: 'Jasmine Buds',
-    teluguName: 'మల్లె మొగ్గలు',
-    phonetic: 'Malle Moggallu',
-    image: 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=600&q=80',
-    unit: 'kg / bunches',
-    tag: 'Fragrant · Mandap garlands',
-  },
-  {
-    id: 'marigold',
-    name: 'Marigold',
-    teluguName: 'బంతి పూలు',
-    phonetic: 'Banti Poolu',
-    image: 'https://images.unsplash.com/photo-1589244159943-460088ed5c92?auto=format&fit=crop&w=600&q=80',
-    unit: 'kg',
-    tag: 'Festive · Auspicious occasions',
-  },
-  {
-    id: 'white-chrysanthemum',
-    name: 'White Chrysanthemum',
-    teluguName: 'తెల్ల చామంతి',
-    phonetic: 'Tella Chamanti',
-    image: 'https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=600&q=80',
-    unit: 'bunches',
-    tag: 'Pure · Pooja & décor',
-  },
-  {
-    id: 'tuberose',
-    name: 'Tuberose',
-    teluguName: 'సంపంగి పూలు',
-    phonetic: 'Sampangi Poolu',
-    image: 'https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=600&q=80',
-    unit: 'bunches',
-    tag: 'Rich fragrance · Garlands',
-  },
-  {
-    id: 'lotus',
-    name: 'Lotus',
-    teluguName: 'తామర పువ్వు',
-    phonetic: 'Thamara Puvvu',
-    image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80',
-    unit: 'pieces',
-    tag: 'Devotional · Sacred pooja',
-  },
-  {
-    id: 'orchid',
-    name: 'Orchid',
-    teluguName: 'ఆర్కిడ్ పూలు',
-    phonetic: 'Orchid Poolu',
-    image: 'https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=600&q=80',
-    unit: 'stems',
-    tag: 'Premium · Stage décor',
-  },
-  {
-    id: 'gerbera',
-    name: 'Gerbera',
-    teluguName: 'జెర్బెరా పూలు',
-    phonetic: 'Gerbera Poolu',
-    image: 'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=600&q=80',
-    unit: 'bunches',
-    tag: 'Vibrant · Colourful backdrop',
-  },
-  {
-    id: 'carnation',
-    name: 'Carnation',
-    teluguName: 'కార్నేషన్ పూలు',
-    phonetic: 'Carnation Poolu',
-    image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=600&q=80',
-    unit: 'bunches',
-    tag: 'Long lasting · Table styling',
-  },
-  {
-    id: 'gladiolus',
-    name: 'Gladiolus',
-    teluguName: 'గ్లాడియోలస్ పూలు',
-    phonetic: 'Gladiolus Poolu',
-    image: 'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80',
-    unit: 'stems',
-    tag: 'Tall stems · Entrance arches',
-  },
-]
-
-export const occasionList = [
-  { name: 'Wedding', icon: '💍', label: 'Wedding' },
-  { name: 'Engagement', icon: '🤝', label: 'Engagement' },
-  { name: 'Reception', icon: '🥂', label: 'Reception' },
-  { name: 'Haldi', icon: '💛', label: 'Haldi' },
-  { name: 'Mehendi', icon: '🌿', label: 'Mehendi' },
-  { name: 'Birthday', icon: '🎂', label: 'Birthday' },
-  { name: 'Anniversary', icon: '💑', label: 'Anniversary' },
-  { name: 'Housewarming', icon: '🏡', label: 'Housewarming' },
-  { name: 'Religious function', icon: '🪔', label: 'Pooja / Religious function' },
-  { name: 'Corporate event', icon: '🏢', label: 'Corporate event' },
-  { name: 'Other celebration', icon: '🎉', label: 'Other celebration' },
-]
-
-export const decorationAreaList = [
-  { name: 'Main stage', icon: '🏛️', label: 'Main stage' },
-  { name: 'Mandap', icon: '⛩️', label: 'Mandap' },
-  { name: 'Entrance / welcome gate', icon: '🚪', label: 'Entrance / welcome gate' },
-  { name: 'Aisle / walkway', icon: '🚶', label: 'Aisle / walkway' },
-  { name: 'Dining tables', icon: '🍽️', label: 'Dining tables' },
-  { name: 'Photo backdrop', icon: '📸', label: 'Photo backdrop' },
-  { name: 'Car decoration', icon: '🚗', label: 'Car decoration' },
-  { name: 'Garlands', icon: '🌸', label: 'Garlands' },
-  { name: 'Bouquets', icon: '💐', label: 'Bouquets' },
-  { name: 'Complete venue styling', icon: '🏰', label: 'Complete venue styling' },
+  { id: 'red-rose', name: 'Red Rose', teluguName: 'ఎరుపు గులాబీ', swatch: '#d62828', unit: 'bunches' },
+  { id: 'pink-rose', name: 'Pink Rose', teluguName: 'గులాబీ పువ్వు', swatch: '#f48fb1', unit: 'bunches' },
+  { id: 'yellow-rose', name: 'Yellow Rose', teluguName: 'పసుపు గులాబీ', swatch: '#fbc02d', unit: 'bunches' },
+  { id: 'jasmine-buds', name: 'Jasmine Buds', teluguName: 'మల్లె మొగ్గలు', swatch: '#faf8f0', unit: 'kg / bunches' },
+  { id: 'marigold', name: 'Marigold', teluguName: 'బంతి పూలు', swatch: '#f57c00', unit: 'kg' },
+  { id: 'white-chrysanthemum', name: 'White Chrysanthemum', teluguName: 'తెల్ల చామంతి', swatch: '#eeeeee', unit: 'bunches' },
+  { id: 'tuberose', name: 'Tuberose', teluguName: 'సంపంగి పూలు', swatch: '#9a1f40', unit: 'bunches' },
+  { id: 'lotus', name: 'Lotus', teluguName: 'తామర పువ్వు', swatch: '#e57373', unit: 'pieces' },
+  { id: 'orchid', name: 'Orchid', teluguName: 'ఆర్కిడ్ పూలు', swatch: '#ab47bc', unit: 'stems' },
+  { id: 'gerbera', name: 'Gerbera', teluguName: 'జెర్బెరా పూలు', swatch: '#ffb74d', unit: 'bunches' },
+  { id: 'carnation', name: 'Carnation', teluguName: 'కార్నేషన్ పూలు', swatch: '#e64a19', unit: 'bunches' },
+  { id: 'gladiolus', name: 'Gladiolus', teluguName: 'గ్లాడియోలస్ పూలు', swatch: '#8e24aa', unit: 'stems' },
 ]
 
 const steps = ['Your occasion', 'The styling', 'Flower selection', 'Event details', 'Review']
+
+const occasionIcons = ['✳', '❋', '✿', '❁', '❀', '✽', '✧', '❃', '✺', '✴', '✳']
 
 export default function Events() {
   const [searchParams] = useSearchParams()
   const { addToCart, notify, designs } = useStore()
   const navigate = useNavigate()
   const initialDesign = designs.find(d => d.id === searchParams.get('design'))
-  const [step, setStep] = useState(2) // Default to step 2 (Flower selection) or 0
+  const [step, setStep] = useState(0)
   const [form, setForm] = useState({
     eventType: initialDesign?.occasion || 'Wedding',
     eventDate: '',
@@ -185,19 +58,6 @@ export default function Events() {
   const [referenceName, setReferenceName] = useState('')
   const [referencePreview, setReferencePreview] = useState('')
   const [errors, setErrors] = useState({})
-
-  const speak = (text, lang = 'en-IN') => {
-    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
-    try {
-      window.speechSynthesis.cancel()
-      const utterance = new SpeechSynthesisUtterance(text)
-      utterance.lang = lang
-      utterance.rate = 0.92
-      window.speechSynthesis.speak(utterance)
-    } catch {
-      // Speech synthesis error fallback
-    }
-  }
 
   const update = (key, value) => setForm(current => ({ ...current, [key]: value }))
   const toggle = (key, value) => update(key, form[key].includes(value) ? form[key].filter(item => item !== value) : [...form[key], value])
@@ -248,7 +108,7 @@ export default function Events() {
   const previous = () => { setErrors({}); setStep(s => Math.max(0, s - 1)) }
 
   const addRequest = () => {
-    const flowerListSummary = form.flowers.length ? form.flowers.join(', ') : 'Florist recommendation'
+    const flowerListSummary = form.flowers.length ? form.flowers.join(', ') : 'Florist recommendations welcome'
     const summary = `${form.eventType} · ${form.theme} styling · ${form.areas.length} decoration areas · ${flowerListSummary}`
     addToCart({
       kind: 'event',
@@ -264,43 +124,37 @@ export default function Events() {
   }
 
   return (
-    <div className="page-wrap accessible-events-page">
+    <div className="page-wrap">
       <PageIntro
-        eyebrow="Weddings · Functions · Celebrations"
+        eyebrow="Weddings · Celebrations · Events"
         title={<>Your day, your way.<br /><em>Let’s plan the flowers.</em></>}
-        description="Start with an occasion, choose the details that matter and share your vision. We’ll help refine the plan and confirm a quotation with you."
+        description="Choose what you have in mind. We’ll help refine the floral plan and confirm availability with you."
         image="/images/reception-decor.webp"
         imageAlt="Floral event decoration inspiration"
       />
 
       <section className="event-planner-section">
-        {/* Assistance banner */}
-        <div className="planner-top-toolbar">
-          <div className="uneducated-assist-bar">
-            <div className="assist-icon-box"><PhoneCall size={20} /></div>
-            <div className="assist-text">
-              <b>Need help choosing?</b>
-              <p>Finding it difficult to fill? Call or WhatsApp us directly — our friendly florist will take care of everything for you!</p>
-            </div>
-            <div className="assist-actions">
-              <a href="tel:+919491554114" className="assist-btn assist-btn-call" title="Call directly">
-                <Phone size={15} /> <span>Call Now: 94915 54114</span>
-              </a>
-              <a href="https://wa.me/919491554114?text=Hello%20Maji%20Flowers%2C%20please%20help%20me%20plan%20event%20flowers." target="_blank" rel="noreferrer" className="assist-btn assist-btn-wa">
-                <MessageCircle size={15} /> <span>WhatsApp Us</span>
-              </a>
-            </div>
+        <div className="planner-heading">
+          <div>
+            <Eyebrow>Made around your celebration</Eyebrow>
+            <h2>Build your floral <em>plan.</em></h2>
+            <p>There’s no need to know every detail yet. Choose what you know and leave the rest for a conversation.</p>
+          </div>
+          <div className="planner-time">
+            <Sparkles size={16} />
+            <span>Takes 2–3 minutes</span>
           </div>
         </div>
 
         <div className="planner-layout">
-          {/* Sidebar */}
+          {/* Elegant Minimal Sidebar */}
           <aside className="planner-sidebar">
             <div className="planner-progress">
               <span>YOUR PLAN</span>
               <b>0{step + 1} <small>/ 05</small></b>
               <div className="progress-track"><i style={{ width: `${(step + 1) * 20}%` }} /></div>
             </div>
+
             <div className="planner-steps">
               {steps.map((label, i) => (
                 <button
@@ -310,21 +164,22 @@ export default function Events() {
                   disabled={i > step}
                   type="button"
                 >
-                  <span className="step-badge">{i < step ? <Check size={16} strokeWidth={3} /> : `0${i + 1}`}</span>
-                  <div className="step-labels">
-                    <b className="step-main-title">{label}</b>
-                    <small className="step-sub-title">Step 0{i + 1}</small>
-                  </div>
+                  <span className="step-badge">{i < step ? <Check size={13} strokeWidth={2.5} /> : `0${i + 1}`}</span>
+                  <span className="step-name">{label}</span>
                 </button>
               ))}
             </div>
 
             <div className="planner-help">
-              <Flower2 size={24} />
+              <Flower2 size={20} />
               <b>Need a little help?</b>
-              <p>Start with your occasion and we’ll guide you through the options. Just call or message us.</p>
-              <a href="https://wa.me/919491554114?text=Hello%20Maji%20Flowers%2C%20I%20need%20help%20planning%20event%20flowers." target="_blank" rel="noreferrer">
-                Direct WhatsApp ↗
+              <p>Start with your occasion and we’ll guide you through the options.</p>
+              <a
+                href="https://wa.me/919491554114?text=Hello%20Maji%20Flowers%2C%20I%20need%20help%20planning%20event%20flowers."
+                target="_blank"
+                rel="noreferrer"
+              >
+                TALK TO OUR TEAM ↗
               </a>
             </div>
           </aside>
@@ -335,43 +190,35 @@ export default function Events() {
             {step === 0 && (
               <div className="planner-step-content">
                 <div className="step-heading">
-                  <div className="step-heading-top">
-                    <span className="step-serial-tag">01 — THE OCCASION</span>
-                    <button type="button" className="step-audio-guide-btn" onClick={() => speak("Step 1: What are we celebrating? Please choose your occasion.")}>
-                      <Volume2 size={18} />
-                      <span>Listen to guide</span>
-                    </button>
-                  </div>
+                  <span>01 — THE OCCASION</span>
                   <h3>What are we celebrating?</h3>
-                  <p>Choose the occasion so we can suggest the right floral direction and style.</p>
+                  <p>Choose an occasion so we can suggest the right floral direction.</p>
                 </div>
 
-                <div className="occasion-grid-accessible">
-                  {occasionList.map((item) => {
-                    const isSelected = form.eventType === item.name
+                <div className="occasion-grid">
+                  {eventTypes.map((type, i) => {
+                    const isSelected = form.eventType === type
                     return (
                       <button
-                        key={item.name}
+                        key={type}
                         type="button"
-                        className={`occasion-card-rich ${isSelected ? 'selected' : ''}`}
-                        onClick={() => update('eventType', item.name)}
+                        className={`occasion-option ${isSelected ? 'selected' : ''}`}
+                        onClick={() => update('eventType', type)}
                       >
-                        <div className="occasion-icon-large">{item.icon}</div>
-                        <div className="occasion-text-block">
-                          <b className="occasion-eng-name">{item.name}</b>
-                        </div>
-                        <span className={`select-indicator-accessible ${isSelected ? 'checked' : ''}`}>
-                          {isSelected && <Check size={16} strokeWidth={3} />}
+                        <span className="occasion-icon">{occasionIcons[i % occasionIcons.length]}</span>
+                        <b>{type}</b>
+                        <span className="select-indicator">
+                          {isSelected && <Check size={13} strokeWidth={2.5} />}
                         </span>
                       </button>
                     )
                   })}
                 </div>
-                {errors.eventType && <p className="form-error-prominent">{errors.eventType}</p>}
+                {errors.eventType && <p className="form-error">{errors.eventType}</p>}
 
                 <div className="planner-tip">
-                  <Sparkles size={20} />
-                  <span>You can change your selections anytime before sending the enquiry.</span>
+                  <Sparkles size={16} />
+                  <span>You can adjust any detail later with our florist before finalizing.</span>
                 </div>
               </div>
             )}
@@ -380,73 +227,66 @@ export default function Events() {
             {step === 1 && (
               <div className="planner-step-content">
                 <div className="step-heading">
-                  <div className="step-heading-top">
-                    <span className="step-serial-tag">02 — THE STYLING</span>
-                    <button type="button" className="step-audio-guide-btn" onClick={() => speak("Step 2: Which spaces should bloom? Select the areas you want us to decorate.")}>
-                      <Volume2 size={18} />
-                      <span>Listen to guide</span>
-                    </button>
-                  </div>
+                  <span>02 — THE STYLING</span>
                   <h3>Which spaces should bloom?</h3>
-                  <p>Select every area you’d like us to consider. We can help you decide the rest.</p>
+                  <p>Select the areas you’d like us to style. Choose as many as you need.</p>
                 </div>
 
-                <div className="areas-grid-accessible">
-                  {decorationAreaList.map((area) => {
-                    const isSelected = form.areas.includes(area.name)
+                <div className="selection-grid">
+                  {decorationAreas.map((area) => {
+                    const isSelected = form.areas.includes(area)
                     return (
                       <button
-                        key={area.name}
+                        key={area}
                         type="button"
-                        className={`area-tile-accessible ${isSelected ? 'selected' : ''}`}
-                        onClick={() => toggle('areas', area.name)}
+                        className={`selection-tile ${isSelected ? 'selected' : ''}`}
+                        onClick={() => toggle('areas', area)}
                       >
-                        <div className="area-icon-wrap">{area.icon}</div>
-                        <div className="area-text-wrap">
-                          <b className="area-primary-name">{area.name}</b>
-                        </div>
-                        <span className={`select-indicator-accessible ${isSelected ? 'checked' : ''}`}>
-                          {isSelected && <Check size={16} strokeWidth={3} />}
+                        <b>{area}</b>
+                        <span className="select-indicator">
+                          {isSelected && <Check size={13} strokeWidth={2.5} />}
                         </span>
                       </button>
                     )
                   })}
                 </div>
-                {errors.areas && <p className="form-error-prominent">{errors.areas}</p>}
+                {errors.areas && <p className="form-error">{errors.areas}</p>}
 
-                {/* Design direction chips */}
-                <div className="field-label-row-accessible">
-                  <label>Colour & Styling Theme</label>
-                  <span>Optional · choose a starting point</span>
-                </div>
-                <div className="theme-chips-accessible">
-                  {themes.map(theme => (
-                    <button
-                      key={theme}
-                      type="button"
-                      className={form.theme === theme ? 'active' : ''}
-                      onClick={() => update('theme', theme)}
-                    >
-                      {theme}
-                    </button>
-                  ))}
-                </div>
-
-                {/* Recommended Curated Inspiration */}
-                <div className="recommended-designs">
-                  <div className="recommended-title">
-                    <span>CURATED DECORATION IDEAS</span>
-                    <small>Tap any photo to select</small>
+                {/* Theme selection */}
+                <div className="theme-select-block">
+                  <div className="section-sub-head">
+                    <label>Design direction</label>
+                    <span>Optional starting point</span>
                   </div>
-                  <div className="recommended-row-accessible">
+                  <div className="theme-chips">
+                    {themes.map(theme => (
+                      <button
+                        key={theme}
+                        type="button"
+                        className={form.theme === theme ? 'active' : ''}
+                        onClick={() => update('theme', theme)}
+                      >
+                        {theme}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Curated designs */}
+                <div className="curated-designs-block">
+                  <div className="section-sub-head">
+                    <label>Curated inspiration</label>
+                    <span>Tap to use as a starting direction</span>
+                  </div>
+                  <div className="curated-designs-grid">
                     {designs.map(d => (
                       <button
                         key={d.id}
                         type="button"
-                        className={`mini-design-accessible ${form.design === d.id ? 'selected' : ''}`}
+                        className={`mini-design ${form.design === d.id ? 'selected' : ''}`}
                         onClick={() => selectDesign(d)}
                       >
-                        <img src={d.image} alt={d.title} />
+                        <img src={d.image} alt={d.title} loading="lazy" />
                         <span>{d.title}</span>
                       </button>
                     ))}
@@ -455,144 +295,81 @@ export default function Events() {
               </div>
             )}
 
-            {/* STEP 2: FLOWER SELECTION (ENGLISH INTERFACE + TELUGU FLOWER NAMES) */}
+            {/* STEP 2: FLOWER SELECTION (AS SHOWN IN USER SCREENSHOT) */}
             {step === 2 && (
               <div className="planner-step-content">
                 <div className="step-heading">
-                  <div className="step-heading-top">
-                    <span className="step-serial-tag">03 — THE FLOWERS</span>
-                    <button
-                      type="button"
-                      className="step-audio-guide-btn"
-                      onClick={() => speak("Step 3: What flowers would you love to see? Look at the photos and tap the flowers you like. If you're not sure, choose let our florist decide.")}
-                    >
-                      <Volume2 size={18} />
-                      <span>Listen to guide</span>
-                    </button>
-                  </div>
-                  <h3>What flowers would you love to see?</h3>
-                  <p>Pick flower varieties you have in mind. Look at the pictures and tap the flowers you like.</p>
+                  <span>03 — THE FLOWERS</span>
+                  <h3>What would you love to see?</h3>
+                  <p>Pick flower varieties you have in mind. Quantities are optional at this stage.</p>
                 </div>
 
-                {/* Florist Recommendation Card */}
-                <div
-                  className={`recommend-banner ${form.flowers.length === 0 ? 'active' : ''}`}
-                  onClick={() => update('flowers', [])}
-                  role="button"
-                  tabIndex={0}
-                >
-                  <div className="recommend-badge-icon">
-                    <Sparkles size={28} />
-                  </div>
-                  <div className="recommend-info">
-                    <b>✨ Not sure which flowers to pick? Let our Florist decide!</b>
-                    <p>No stress! Tap here and our floral experts will handpick the freshest, best-suited flowers for your event.</p>
-                  </div>
-                  <div className="recommend-action">
-                    <span className={`recommend-pill ${form.flowers.length === 0 ? 'selected' : ''}`}>
-                      {form.flowers.length === 0 ? '✓ Florist Choice Selected' : '+ Tap: Let Florist Choose'}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Flower Photo Cards Grid with English Titles & Telugu Names */}
-                <div className="flower-photo-grid">
+                {/* 3-column flower cards matching screenshot */}
+                <div className="flower-select-grid">
                   {flowerCatalog.map((flower) => {
                     const isSelected = form.flowers.includes(flower.name)
                     return (
-                      <div
-                        key={flower.name}
-                        className={`flower-card-rich ${isSelected ? 'selected' : ''}`}
+                      <button
+                        key={flower.id}
+                        type="button"
+                        className={`flower-select ${isSelected ? 'selected' : ''}`}
                         onClick={() => toggleFlower(flower.name)}
-                        role="button"
-                        tabIndex={0}
                       >
-                        <div className="flower-card-img-wrap">
-                          <img src={flower.image} alt={flower.name} loading="lazy" />
-                          <span className={`flower-check-badge ${isSelected ? 'checked' : ''}`}>
-                            {isSelected ? <Check size={18} strokeWidth={3} /> : <span className="empty-circle-badge" />}
-                          </span>
-                          {isSelected && <span className="flower-selected-tag">✓ Selected</span>}
+                        <span
+                          className="flower-swatch"
+                          style={{ backgroundColor: flower.swatch }}
+                        />
+                        <div className="flower-select-name">
+                          <span className="flower-en-name">{flower.name}</span>
+                          <span className="flower-te-name">({flower.teluguName})</span>
                         </div>
-
-                        <div className="flower-card-info">
-                          <div className="flower-name-row">
-                            <b className="flower-primary-name">{flower.name}</b>
-                            <button
-                              type="button"
-                              className="flower-audio-btn"
-                              title="Hear name pronunciation / వినండి"
-                              onClick={(e) => {
-                                e.stopPropagation()
-                                speak(`${flower.name}. ${flower.teluguName}.`, 'te-IN')
-                              }}
-                            >
-                              <Volume2 size={17} />
-                            </button>
-                          </div>
-                          {/* Telugu Flower Name */}
-                          <div className="flower-vernacular-name">
-                            <span className="vernacular-native">{flower.teluguName}</span>
-                            <span className="vernacular-phonetic">({flower.phonetic})</span>
-                          </div>
-                          <div className="flower-card-meta">
-                            <span className="flower-tag-pill">{flower.tag}</span>
-                          </div>
-                        </div>
-                      </div>
+                        <span className="select-indicator">
+                          {isSelected && <Check size={13} strokeWidth={2.5} />}
+                        </span>
+                      </button>
                     )
                   })}
                 </div>
 
-                {/* Optional Quantity Stepper if user selected specific flowers */}
-                {form.flowers.length > 0 && (
-                  <div className="quantity-editor-friendly">
-                    <div className="quantity-editor-head">
-                      <div>
-                        <h4>Your Selected Flowers & Quantities (Optional)</h4>
-                        <p>Quantity is optional. If not sure, leave it as is — our florist will discuss it with you.</p>
-                      </div>
-                      <span className="selected-count-pill">
-                        🌸 {form.flowers.length} selected
-                      </span>
-                    </div>
+                {/* "I'm open to recommendations" box matching screenshot */}
+                <button
+                  type="button"
+                  className={`help-me-decide ${form.flowers.length === 0 ? 'selected' : ''}`}
+                  onClick={() => update('flowers', [])}
+                >
+                  <span className="help-icon">✳</span>
+                  <div>
+                    <b>I’m open to recommendations</b>
+                    <small>Let Maji suggest suitable flowers for my event.</small>
+                  </div>
+                  <span className="select-indicator">
+                    {form.flowers.length === 0 && <Check size={13} strokeWidth={2.5} />}
+                  </span>
+                </button>
 
-                    <div className="quantity-cards-grid">
-                      {selectedQuantities.map((item) => {
-                        const flowerObj = flowerCatalog.find(f => f.name === item.name)
-                        const currentQty = form.quantities[item.name] || 0
-                        return (
-                          <div className="qty-card-row" key={item.name}>
-                            <img src={flowerObj?.image} alt={item.name} className="qty-thumb" />
-                            <div className="qty-info">
-                              <b>{item.name}</b>
-                              <small>{item.teluguName}</small>
-                            </div>
-                            <div className="friendly-stepper">
-                              <button
-                                type="button"
-                                className="stepper-btn"
-                                onClick={() => setQuantity(item.name, Math.max(0, currentQty - 1))}
-                                aria-label="Decrease quantity"
-                              >
-                                <Minus size={16} />
-                              </button>
-                              <span className="stepper-val">
-                                {currentQty > 0 ? `${currentQty} ${item.unit}` : `Any qty (${item.unit})`}
-                              </span>
-                              <button
-                                type="button"
-                                className="stepper-btn"
-                                onClick={() => setQuantity(item.name, currentQty + 1)}
-                                aria-label="Increase quantity"
-                              >
-                                <Plus size={16} />
-                              </button>
-                            </div>
-                          </div>
-                        )
-                      })}
+                {/* Clean, subtle Quantity Editor (only when flowers selected) */}
+                {form.flowers.length > 0 && (
+                  <div className="quantity-editor">
+                    <div className="quantity-editor-heading">
+                      <b>Add quantities (optional)</b>
+                      <span>Approximate amounts are fine — our florist will discuss final counts with you</span>
                     </div>
+                    {selectedQuantities.map((item) => (
+                      <div className="quantity-editor-row" key={item.name}>
+                        <div className="quantity-editor-label">
+                          <span className="qty-name-en">{item.name}</span>
+                          <span className="qty-name-te">({item.teluguName})</span>
+                        </div>
+                        <input
+                          type="number"
+                          min="0"
+                          value={form.quantities[item.name] || ''}
+                          onChange={e => setQuantity(item.name, e.target.value)}
+                          placeholder="—"
+                        />
+                        <small>{item.unit}</small>
+                      </div>
+                    ))}
                   </div>
                 )}
               </div>
@@ -602,31 +379,25 @@ export default function Events() {
             {step === 3 && (
               <div className="planner-step-content">
                 <div className="step-heading">
-                  <div className="step-heading-top">
-                    <span className="step-serial-tag">04 — EVENT DETAILS</span>
-                    <button type="button" className="step-audio-guide-btn" onClick={() => speak("Step 4: Please enter your event date, name and contact number.")}>
-                      <Volume2 size={18} />
-                      <span>Listen to guide</span>
-                    </button>
-                  </div>
+                  <span>04 — EVENT DETAILS</span>
                   <h3>Tell us a little more.</h3>
-                  <p>These details help us understand the celebration and prepare a relevant quotation.</p>
+                  <p>These details help us understand the celebration and prepare an accurate proposal.</p>
                 </div>
 
-                <div className="form-grid-accessible">
-                  <label className="form-field-accessible">
-                    <span>📅 Event Date *</span>
+                <div className="form-grid">
+                  <label className="form-field">
+                    <span>Event date *</span>
                     <input
                       type="date"
                       value={form.eventDate}
                       min={new Date().toISOString().slice(0, 10)}
                       onChange={e => update('eventDate', e.target.value)}
                     />
-                    {errors.eventDate && <small className="form-error-prominent">{errors.eventDate}</small>}
+                    {errors.eventDate && <small className="form-error">{errors.eventDate}</small>}
                   </label>
 
-                  <label className="form-field-accessible">
-                    <span>⏰ Event Time</span>
+                  <label className="form-field">
+                    <span>Event time</span>
                     <input
                       type="time"
                       value={form.eventTime}
@@ -634,8 +405,8 @@ export default function Events() {
                     />
                   </label>
 
-                  <label className="form-field-accessible">
-                    <span>📍 Venue / Function Hall</span>
+                  <label className="form-field">
+                    <span>Venue / function hall</span>
                     <input
                       value={form.venue}
                       onChange={e => update('venue', e.target.value)}
@@ -643,65 +414,84 @@ export default function Events() {
                     />
                   </label>
 
-                  <label className="form-field-accessible">
-                    <span>🏙️ Venue Location / City</span>
+                  <label className="form-field">
+                    <span>Venue location / Area</span>
                     <input
                       value={form.location}
                       onChange={e => update('location', e.target.value)}
-                      placeholder="e.g. Hyderabad, Mehdipatnam, Gudimalkapur"
+                      placeholder="e.g. Hyderabad, Mehdipatnam"
                     />
                   </label>
 
-                  <label className="form-field-accessible">
-                    <span>👤 Your Name *</span>
+                  <label className="form-field">
+                    <span>Estimated guest count (optional)</span>
                     <input
-                      value={form.name}
-                      onChange={e => update('name', e.target.value)}
-                      placeholder="How should we address you?"
+                      value={form.guests}
+                      onChange={e => update('guests', e.target.value)}
+                      placeholder="e.g. 500 guests"
                     />
-                    {errors.name && <small className="form-error-prominent">{errors.name}</small>}
                   </label>
 
-                  <label className="form-field-accessible">
-                    <span>📞 Phone Number *</span>
-                    <input
-                      type="tel"
-                      value={form.phone}
-                      onChange={e => update('phone', e.target.value)}
-                      placeholder="Your 10-digit mobile number"
-                    />
-                    {errors.phone && <small className="form-error-prominent">{errors.phone}</small>}
-                  </label>
-
-                  <label className="form-field-accessible form-field-full">
-                    <span>💰 Approx. Floral Budget (Optional)</span>
+                  <label className="form-field">
+                    <span>Approx. floral budget (optional)</span>
                     <select value={form.budget} onChange={e => update('budget', e.target.value)}>
-                      <option value="">Not decided yet / Discuss on call</option>
+                      <option value="">Select a range / Discuss on call</option>
                       <option>Below ₹15,000</option>
                       <option>₹15,000 – ₹30,000</option>
                       <option>₹30,000 – ₹60,000</option>
                       <option>₹60,000 – ₹1,20,000</option>
                       <option>Above ₹1,20,000</option>
+                      <option>Not sure yet</option>
                     </select>
                   </label>
 
-                  <label className="form-field-accessible form-field-full">
-                    <span>📝 Any special note or instruction</span>
+                  <label className="form-field">
+                    <span>Your name *</span>
+                    <input
+                      value={form.name}
+                      onChange={e => update('name', e.target.value)}
+                      placeholder="Your full name"
+                    />
+                    {errors.name && <small className="form-error">{errors.name}</small>}
+                  </label>
+
+                  <label className="form-field">
+                    <span>Phone number *</span>
+                    <input
+                      type="tel"
+                      value={form.phone}
+                      onChange={e => update('phone', e.target.value)}
+                      placeholder="10-digit mobile number"
+                    />
+                    {errors.phone && <small className="form-error">{errors.phone}</small>}
+                  </label>
+
+                  <label className="form-field form-field-full">
+                    <span>Email address (optional)</span>
+                    <input
+                      type="email"
+                      value={form.email}
+                      onChange={e => update('email', e.target.value)}
+                      placeholder="you@example.com"
+                    />
+                  </label>
+
+                  <label className="form-field form-field-full">
+                    <span>Special requirements or notes</span>
                     <textarea
                       rows="3"
                       value={form.notes}
                       onChange={e => update('notes', e.target.value)}
-                      placeholder="Colours, timing, garland length, or any special flower requirements..."
+                      placeholder="Preferred colors, garland length, setup timings..."
                     />
                   </label>
 
-                  {/* Photo upload for reference */}
-                  <div className="form-field-accessible form-field-full">
-                    <span>📸 Photo Reference (Optional)</span>
-                    <label className="upload-area-accessible">
-                      <ImagePlus size={24} />
-                      <span>{referenceName || 'Tap here to upload an inspiration or decoration photo'}</span>
-                      <small>Upload photo from your phone or computer</small>
+                  <div className="form-field form-field-full">
+                    <span className="upload-label">Reference photo (optional)</span>
+                    <label className="upload-area">
+                      <ImagePlus size={20} />
+                      <span>{referenceName || 'Choose a reference photo'}</span>
+                      <small>JPG, PNG or WEBP</small>
                       <input
                         type="file"
                         accept="image/png,image/jpeg,image/webp"
@@ -715,10 +505,10 @@ export default function Events() {
                       />
                     </label>
                     {referencePreview && (
-                      <div className="reference-preview-accessible">
+                      <div className="reference-preview">
                         <img src={referencePreview} alt="Reference" />
                         <button type="button" onClick={() => { setReferenceName(''); setReferencePreview('') }}>
-                          Remove photo
+                          Remove
                         </button>
                       </div>
                     )}
@@ -731,113 +521,124 @@ export default function Events() {
             {step === 4 && (
               <div className="planner-step-content review-content">
                 <div className="step-heading">
-                  <div className="step-heading-top">
-                    <span className="step-serial-tag">05 — YOUR PLAN</span>
-                    <button type="button" className="step-audio-guide-btn" onClick={() => speak("Step 5: Review your plan. Tap the button to send your enquiry on WhatsApp.")}>
-                      <Volume2 size={18} />
-                      <span>Listen to guide</span>
-                    </button>
-                  </div>
-                  <h3>Here is what you selected.</h3>
-                  <p>Check your choices below. Tap the button to send this plan to Maji Flowers on WhatsApp.</p>
+                  <span>05 — YOUR PLAN</span>
+                  <h3>Here’s what you have in mind.</h3>
+                  <p>Review your selections below. You can send this plan to Maji on WhatsApp.</p>
                 </div>
 
-                <div className="review-card-accessible">
-                  <div className="review-head-accessible">
+                <div className="review-card">
+                  <div className="review-card-head">
                     <div>
-                      <span className="review-eyebrow">OCCASION</span>
+                      <span>OCCASION</span>
                       <h4>{form.eventType}</h4>
                     </div>
-                    <button type="button" className="review-edit-btn" onClick={() => setStep(0)}>
+                    <button type="button" onClick={() => setStep(0)}>
                       Edit
                     </button>
                   </div>
 
-                  <div className="review-divider-accessible" />
+                  <div className="review-divider" />
 
-                  <div className="review-row-accessible">
-                    <span>Spaces to decorate</span>
-                    <b>{form.areas.join(', ')}</b>
-                  </div>
-
-                  <div className="review-row-accessible">
-                    <span>Theme / Style</span>
+                  <div className="review-row">
+                    <span>Design direction</span>
                     <b>{form.theme}</b>
                   </div>
 
-                  <div className="review-row-accessible review-flowers-block">
-                    <span>Flowers</span>
-                    {form.flowers.length > 0 ? (
-                      <div className="review-flowers-summary">
-                        {form.flowers.map(f => {
-                          const flowerObj = flowerCatalog.find(cat => cat.name === f)
-                          return (
-                            <div key={f} className="review-flower-chip">
-                              <img src={flowerObj?.image} alt={f} />
-                              <span>{f} ({flowerObj?.teluguName}) {form.quantities[f] ? `— ${form.quantities[f]}` : ''}</span>
-                            </div>
-                          )
-                        })}
-                      </div>
+                  {selectedDesign && (
+                    <div className="review-design">
+                      <img src={selectedDesign.image} alt={selectedDesign.title} />
+                      <span>{selectedDesign.title}</span>
+                    </div>
+                  )}
+
+                  <div className="review-row review-top">
+                    <span>Decoration areas</span>
+                    <b>{form.areas.length} selected</b>
+                  </div>
+                  <div className="review-tags">
+                    {form.areas.length ? (
+                      form.areas.map(a => <span key={a}>{a}</span>)
                     ) : (
-                      <b>✨ Florist expert recommendation</b>
+                      <span>To be discussed</span>
                     )}
                   </div>
 
-                  <div className="review-divider-accessible" />
+                  <div className="review-row review-top">
+                    <span>Flowers</span>
+                    <b>{form.flowers.length ? `${form.flowers.length} varieties` : 'Recommendations welcome'}</b>
+                  </div>
+                  <div className="review-tags">
+                    {form.flowers.length > 0 ? (
+                      form.flowers.map(f => {
+                        const match = flowerCatalog.find(c => c.name === f)
+                        return (
+                          <span key={f}>
+                            {f} ({match?.teluguName})
+                            {form.quantities[f] ? ` · ${form.quantities[f]}` : ''}
+                          </span>
+                        )
+                      })
+                    ) : (
+                      <span>Florist recommendations welcome</span>
+                    )}
+                  </div>
 
-                  <div className="review-row-accessible">
-                    <span>Event Date</span>
+                  <div className="review-divider" />
+
+                  <div className="review-row">
+                    <span>Event date</span>
                     <b>{form.eventDate || 'To be decided'}</b>
                   </div>
 
-                  <div className="review-row-accessible">
+                  <div className="review-row">
                     <span>Venue</span>
-                    <b>{form.venue || 'To be shared on call'}</b>
+                    <b>{form.venue || 'To be confirmed'}</b>
                   </div>
 
-                  <div className="review-row-accessible">
-                    <span>Contact Person</span>
-                    <b>{form.name} ({form.phone})</b>
+                  <div className="review-row">
+                    <span>Location</span>
+                    <b>{form.location || 'Not shared'}</b>
+                  </div>
+
+                  <div className="review-row">
+                    <span>Contact</span>
+                    <b>{form.name} · {form.phone}</b>
                   </div>
 
                   {form.notes && (
-                    <div className="review-row-accessible">
-                      <span>Special Note</span>
-                      <p className="review-notes-text">“{form.notes}”</p>
-                    </div>
+                    <p className="review-notes">“{form.notes}”</p>
                   )}
                 </div>
 
-                <div className="review-note-accessible">
-                  <Sparkles size={20} />
+                <div className="review-note">
+                  <Sparkles size={16} />
                   <span>
-                    No advance payment required now! Our florist will call or WhatsApp you directly to discuss fresh flower rates and final arrangements.
+                    No advance payment required. Availability and final pricing will be discussed with our florist directly on WhatsApp or phone.
                   </span>
                 </div>
               </div>
             )}
 
-            {/* Navigation buttons */}
-            <div className="planner-controls-accessible">
+            {/* Minimal, Professional Controls */}
+            <div className="planner-controls">
               {step > 0 ? (
-                <button type="button" className="btn-step-nav btn-step-back" onClick={previous}>
-                  <ArrowLeft size={20} />
+                <button type="button" className="back-step" onClick={previous}>
+                  <ArrowLeft size={16} />
                   <span>Back</span>
                 </button>
               ) : (
-                <span className="planner-note-small">✨ Free consultation · No payment needed</span>
+                <span className="planner-control-note">No payment required to send an enquiry.</span>
               )}
 
               {step < 4 ? (
-                <button type="button" className="btn-step-nav btn-step-next" onClick={next}>
+                <button type="button" className="button button-dark" onClick={next}>
                   <span>Continue</span>
-                  <ArrowRight size={20} />
+                  <ArrowRight size={16} />
                 </button>
               ) : (
-                <button type="button" className="btn-step-nav btn-step-submit" onClick={addRequest}>
+                <button type="button" className="button button-dark" onClick={addRequest}>
                   <span>Send Enquiry via WhatsApp</span>
-                  <ArrowRight size={20} />
+                  <ArrowRight size={16} />
                 </button>
               )}
             </div>
